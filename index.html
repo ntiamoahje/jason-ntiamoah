@@ -3,8 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Jason Ntiamoah | Media Portfolio</title>
-  <meta name="description" content="Media portfolio featuring demo reel, selected video work, capstone production, music, skills, and resume." />
+  <meta name="description" content="Media producer and video editor specializing in storytelling, sound-driven visuals, and experimental media." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jason Ntiamoah | Media Portfolio" />
+  <meta property="og:description" content="Story-driven media, editing, cinematography, and sound design." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon (simple, professional placeholder) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%237c5cff'/%3E%3Ctext x='50' y='62' font-size='48' text-anchor='middle' fill='white' font-family='Arial, Helvetica'%3EJN%3C/text%3E%3C/svg%3E">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -12,15 +22,14 @@
 
 <header class="nav">
   <div class="nav-inner">
-    <a class="logo" href="#top" aria-label="Home">Jason Ntiamoah</a>
-
-    <nav class="nav-links" aria-label="Primary">
+    <a class="logo" href="#top">Jason Ntiamoah</a>
+    <nav class="nav-links">
       <a href="#reel">Reel</a>
+      <a href="#about">About</a>
       <a href="#work">Work</a>
       <a href="#capstone">Capstone</a>
       <a href="#music">Music</a>
       <a href="#skills">Skills</a>
-      <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -30,93 +39,61 @@
 
   <!-- HERO -->
   <section class="hero reveal">
-    <div class="hero-grid">
-      <div class="hero-left">
-        <div class="pill">Media Portfolio</div>
+    <span class="pill">Media Portfolio</span>
 
-        <h1>Media Producer • Video Editor • Cinematography • Audio</h1>
+    <h1>Media Producer • Video Editor • Cinematography • Audio</h1>
 
-        <p class="hero-text">
-          I create story-driven media that blends visual storytelling, sound design, and pacing.
-          My work spans narrative film, experimental media, and music-driven content, with hands-on
-          experience across production and post-production workflows.
-        </p>
+    <p class="hero-text">
+      I create story-driven media that blends visual storytelling, sound design,
+      and rhythm. My work spans narrative film, experimental media, and music-driven
+      visuals, with hands-on experience across production and post-production.
+    </p>
 
-        <div class="hero-buttons">
-          <a class="btn primary" href="#reel">
-            <span class="icon" aria-hidden="true">
-              <!-- play icon -->
-              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </span>
-            Watch Demo Reel
-          </a>
+    <div class="hero-buttons">
+      <a class="btn primary" href="#reel">Watch Demo Reel</a>
+      <a class="btn" href="#work">View Work</a>
+      <a class="btn" href="https://drive.google.com/file/d/12rdJcmk9wn5SZu5tNst2k3dlRCLnb0h5/view?usp=sharing" target="_blank">
+        Download Resume
+      </a>
+    </div>
 
-          <a class="btn" href="#work">
-            <span class="icon" aria-hidden="true">
-              <!-- grid icon -->
-              <svg viewBox="0 0 24 24"><path d="M3 3h8v8H3zM13 3h8v8h-8zM3 13h8v8H3zM13 13h8v8h-8z"/></svg>
-            </span>
-            View Work
-          </a>
-
-          <a class="btn"
-             href="https://drive.google.com/file/d/12rdJcmk9wn5SZu5tNst2k3dlRCLnb0h5/view?usp=sharing"
-             target="_blank" rel="noreferrer">
-            <span class="icon" aria-hidden="true">
-              <!-- download icon -->
-              <svg viewBox="0 0 24 24"><path d="M12 3v10m0 0 4-4m-4 4-4-4M5 20h14"/></svg>
-            </span>
-            Download Resume
-          </a>
-        </div>
-
-        <div class="tags">
-          <span>Premiere Pro</span>
-          <span>Audition</span>
-          <span>Cinematography</span>
-          <span>Sound Design</span>
-          <span>Storytelling</span>
-        </div>
-      </div>
-
-      <div class="hero-right">
-        <div class="hero-card">
-          <div class="hero-card-title">Currently Open To</div>
-          <ul class="hero-list">
-            <li>Internships & entry-level opportunities</li>
-            <li>Freelance editing & creative projects</li>
-            <li>Music-driven visuals & performance work</li>
-            <li>Collaborations and production support</li>
-          </ul>
-          <div class="hero-card-cta">
-            <a class="btn block" href="mailto:jasonntia@gmail.com">
-              <span class="icon" aria-hidden="true">
-                <!-- mail icon -->
-                <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
-              </span>
-              Email Me
-            </a>
-          </div>
-        </div>
-      </div>
+    <div class="tags">
+      <span>Premiere Pro</span>
+      <span>Audition</span>
+      <span>Cinematography</span>
+      <span>Sound Design</span>
+      <span>Storytelling</span>
     </div>
   </section>
 
   <!-- DEMO REEL -->
-  <section id="reel" class="section reveal">
+  <section id="reel" class="section reveal featured-glow">
     <div class="section-head">
       <h2>Demo Reel</h2>
-      <p>Selected highlights showcasing editing, pacing, and audio-visual storytelling.</p>
+      <p>A concise overview of my editing, pacing, and audio-visual storytelling.</p>
     </div>
 
     <div class="video video-hero">
-      <iframe
-        src="https://www.youtube.com/embed/khUQYK91w-o"
-        title="Demo Reel"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+      <iframe src="https://www.youtube.com/embed/khUQYK91w-o" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section reveal">
+    <div class="section-head">
+      <h2>About</h2>
+    </div>
+
+    <div class="card">
+      <p class="card-text">
+        I’m a media producer and editor with a strong focus on rhythm, atmosphere,
+        and emotional clarity. My background in music production directly influences
+        how I approach pacing, sound design, and visual timing in film and video work.
+        <br><br>
+        I’m especially interested in projects that explore mood, psychology, and
+        non-traditional storytelling, and I’m currently seeking internships,
+        entry-level media roles, and creative collaborations.
+      </p>
     </div>
   </section>
 
@@ -124,131 +101,103 @@
   <section id="work" class="section reveal">
     <div class="section-head">
       <h2>Selected Work</h2>
-      <p>A focused set of projects showing range across music video, editing, composition, and storytelling.</p>
+      <p>A focused selection demonstrating range across music video, editing, and narrative structure.</p>
     </div>
 
     <div class="grid">
 
-      <article class="card reveal">
+      <!-- MUSIC VIDEO -->
+      <article class="card reveal featured-glow">
         <div class="meta-row">
-          <span class="meta">Music Video • Performer • Co-Director</span>
+          <span class="meta">Music Video</span>
           <span class="chip">Featured</span>
         </div>
 
         <div class="video video-small">
-          <iframe
-            src="https://www.youtube.com/embed/3lkqnvLS8h4"
-            title="Music Video"
-            frameborder="0"
-            allowfullscreen>
-          </iframe>
+          <iframe src="https://www.youtube.com/embed/3lkqnvLS8h4" allowfullscreen></iframe>
         </div>
 
         <p class="card-text">
-          Official music video for my original song. I acted in the video and co-directed the project,
-          contributing to creative direction, on-screen performance, and visual storytelling from concept through execution.
+          <strong>Role:</strong> Performer • Co-Director  
+          <br>
+          Official music video for my original song. I performed on camera and
+          co-directed the project, shaping visual direction, performance, and tone
+          from concept through execution.
         </p>
       </article>
 
       <article class="card reveal">
         <div class="meta-row">
-          <span class="meta">Editing • Pacing • Continuity</span>
+          <span class="meta">Editing Exercise</span>
         </div>
 
         <div class="video video-small">
-          <iframe
-            src="https://www.youtube.com/embed/DARtWTcVBt8"
-            title="Project Video"
-            frameborder="0"
-            allowfullscreen>
-          </iframe>
+          <iframe src="https://www.youtube.com/embed/DARtWTcVBt8" allowfullscreen></iframe>
         </div>
 
         <p class="card-text">
-          Clean pacing and continuity with intentional shot selection to maintain clarity and momentum throughout the edit.
+          <strong>Role:</strong> Editor  
+          <br>
+          Focused on pacing, continuity, and shot selection to maintain momentum
+          and visual clarity.
         </p>
       </article>
 
       <article class="card reveal">
         <div class="meta-row">
-          <span class="meta">Composition • Sequencing • Atmosphere</span>
+          <span class="meta">Visual Composition</span>
         </div>
 
         <div class="video video-small">
-          <iframe
-            src="https://www.youtube.com/embed/X63PJs7yqxg"
-            title="Project Video"
-            frameborder="0"
-            allowfullscreen>
-          </iframe>
+          <iframe src="https://www.youtube.com/embed/X63PJs7yqxg" allowfullscreen></iframe>
         </div>
 
         <p class="card-text">
-          Built around composition and sequencing to establish mood and a strong visual atmosphere.
+          <strong>Role:</strong> Editor  
+          <br>
+          Built around composition and sequencing to establish mood and visual atmosphere.
         </p>
       </article>
 
       <article class="card reveal">
         <div class="meta-row">
-          <span class="meta">Structure • Story Progression</span>
+          <span class="meta">Narrative Structure</span>
         </div>
 
         <div class="video video-small">
-          <iframe
-            src="https://www.youtube.com/embed/SJ49ufvJnY4"
-            title="Project Video"
-            frameborder="0"
-            allowfullscreen>
-          </iframe>
+          <iframe src="https://www.youtube.com/embed/SJ49ufvJnY4" allowfullscreen></iframe>
         </div>
 
         <p class="card-text">
-          Emphasis on narrative clarity through pacing, structure, and intentional scene progression.
+          <strong>Role:</strong> Editor  
+          <br>
+          Emphasis on structure, progression, and viewer orientation across the edit.
         </p>
       </article>
 
-    </div>
-
-    <div class="panel reveal">
-      <div>
-        <h3 class="panel-title">Additional Work</h3>
-        <p class="panel-text">A broader archive of supporting projects and edits.</p>
-      </div>
-      <a class="btn"
-         href="https://drive.google.com/drive/folders/1CWRcPLdu2V5MNC3XeRh5xHHekVmsfPfg?usp=drive_link"
-         target="_blank" rel="noreferrer">
-        <span class="icon" aria-hidden="true">
-          <!-- arrow icon -->
-          <svg viewBox="0 0 24 24"><path d="M5 12h12"/><path d="m13 6 6 6-6 6"/></svg>
-        </span>
-        View Archive
-      </a>
     </div>
   </section>
 
   <!-- CAPSTONE -->
-  <section id="capstone" class="section reveal">
+  <section id="capstone" class="section reveal featured-glow">
     <div class="section-head">
       <h2>Capstone Media Theses Production</h2>
-      <p>Assistant Editor / Production Support • Experimental Short Film</p>
+      <p>Experimental Short Film</p>
     </div>
 
-    <div class="card reveal">
+    <div class="card">
       <p class="card-text">
-        An experimental short film exploring dissociation through repetition, uncanny imagery, and distorted sound design.
-        Instead of a traditional three-act structure, the project immerses the viewer in derealization—blurring reality and
-        dreamlike perception. I assisted with editing, visual continuity, and sound-driven storytelling throughout post-production.
+        <strong>Role:</strong> Assistant Editor • Production Support  
+        <br><br>
+        An experimental short film exploring dissociation through repetition,
+        uncanny imagery, and distorted sound design. Rather than following a
+        traditional narrative structure, the project immerses the audience in
+        a fragmented, disorienting experience.
       </p>
     </div>
 
-    <div class="video video-hero reveal" style="margin-top:18px;">
-      <iframe
-        src="https://www.youtube.com/embed/xzx7-x82cng"
-        title="Capstone Media Theses Production"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+    <div class="video video-hero">
+      <iframe src="https://www.youtube.com/embed/xzx7-x82cng" allowfullscreen></iframe>
     </div>
   </section>
 
@@ -256,18 +205,13 @@
   <section id="music" class="section reveal">
     <div class="section-head">
       <h2>Music & Audio</h2>
-      <p>I produce and release music as <strong>Dr. Blackout</strong>, which informs my approach to rhythm, pacing, and sound design.</p>
+      <p>Released music as Dr. Blackout — a major influence on my visual rhythm and sound design.</p>
     </div>
 
-    <div class="card reveal">
+    <div class="card">
       <iframe
-        style="border-radius:14px"
-        src="https://open.spotify.com/embed/artist/303ESft4GOklhvhPIDsXdr?utm_source=generator"
-        width="100%"
-        height="352"
-        frameborder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
+        src="https://open.spotify.com/embed/artist/303ESft4GOklhvhPIDsXdr"
+        width="100%" height="352" allowfullscreen>
       </iframe>
     </div>
   </section>
@@ -276,54 +220,28 @@
   <section id="skills" class="section reveal">
     <div class="section-head">
       <h2>Skills</h2>
-      <p>A snapshot of production and post-production capabilities.</p>
     </div>
 
-    <div class="grid skills-grid">
-      <div class="card reveal">
-        <h3 class="card-title">Core</h3>
+    <div class="grid">
+      <div class="card">
         <ul class="list">
-          <li>Video editing and pacing</li>
-          <li>Visual continuity and sequencing</li>
-          <li>Sound design and audio cleanup</li>
+          <li>Video editing & pacing</li>
+          <li>Sound design & cleanup</li>
+          <li>Visual continuity</li>
           <li>Cinematography fundamentals</li>
-          <li>Creative direction and collaboration</li>
+          <li>Creative collaboration</li>
         </ul>
       </div>
 
-      <div class="card reveal">
-        <h3 class="card-title">Tools</h3>
+      <div class="card">
         <ul class="list">
           <li>Adobe Premiere Pro</li>
           <li>Adobe Audition</li>
           <li>Adobe Photoshop</li>
-          <li>DSLR / Mirrorless cameras</li>
-          <li>External microphones and audio equipment</li>
+          <li>DSLR / mirrorless cameras</li>
+          <li>External microphones</li>
         </ul>
       </div>
-    </div>
-  </section>
-
-  <!-- RESUME -->
-  <section id="resume" class="section reveal">
-    <div class="section-head">
-      <h2>Resume</h2>
-      <p>Download a PDF copy of my most recent resume.</p>
-    </div>
-
-    <div class="panel reveal">
-      <div>
-        <h3 class="panel-title">Resume (PDF)</h3>
-        <p class="panel-text">Updated and ready for opportunities.</p>
-      </div>
-      <a class="btn primary"
-         href="https://drive.google.com/file/d/12rdJcmk9wn5SZu5tNst2k3dlRCLnb0h5/view?usp=sharing"
-         target="_blank" rel="noreferrer">
-        <span class="icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M12 3v10m0 0 4-4m-4 4-4-4M5 20h14"/></svg>
-        </span>
-        Download
-      </a>
     </div>
   </section>
 
@@ -331,22 +249,11 @@
   <section id="contact" class="section reveal">
     <div class="section-head">
       <h2>Contact</h2>
-      <p>Reach out for opportunities, collaborations, or questions.</p>
+      <p>Open to opportunities and collaborations.</p>
     </div>
 
-    <div class="panel reveal">
-      <div>
-        <h3 class="panel-title">Email</h3>
-        <p class="panel-text">
-          <a class="email" href="mailto:jasonntia@gmail.com">jasonntia@gmail.com</a>
-        </p>
-      </div>
-      <a class="btn" href="mailto:jasonntia@gmail.com">
-        <span class="icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
-        </span>
-        Message
-      </a>
+    <div class="panel">
+      <a class="btn primary" href="mailto:jasonntia@gmail.com">jasonntia@gmail.com</a>
     </div>
   </section>
 
@@ -356,39 +263,22 @@
   © <span id="year"></span> Jason Ntiamoah
 </footer>
 
-<!-- Floating Back to Top -->
-<button class="to-top" type="button" aria-label="Back to top">
-  <span class="icon" aria-hidden="true">
-    <svg viewBox="0 0 24 24"><path d="M12 19V5"/><path d="m6 11 6-6 6 6"/></svg>
-  </span>
-</button>
+<button class="to-top">↑</button>
 
 <script>
-  // year
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // reveal on scroll
-  const revealEls = document.querySelectorAll(".reveal");
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting) e.target.classList.add("in");
-    });
-  }, { threshold: 0.12 });
+  const reveals = document.querySelectorAll(".reveal");
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => e.isIntersecting && e.target.classList.add("in"));
+  }, { threshold: 0.15 });
+  reveals.forEach(r => io.observe(r));
 
-  revealEls.forEach(el => io.observe(el));
-
-  // back to top
   const topBtn = document.querySelector(".to-top");
-  const toggleTop = () => {
-    if (window.scrollY > 500) topBtn.classList.add("show");
-    else topBtn.classList.remove("show");
-  };
-  toggleTop();
-  window.addEventListener("scroll", toggleTop, { passive: true });
-
-  topBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  window.addEventListener("scroll", () => {
+    topBtn.classList.toggle("show", window.scrollY > 500);
   });
+  topBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 </script>
 
 </body>
