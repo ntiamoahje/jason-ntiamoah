@@ -1,233 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jason Ntiamoah | Media Portfolio</title>
-  <meta name="description" content="Media producer and video editor specializing in story-driven visuals and sound-led pacing." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jason Ntiamoah | Media & Visual Storytelling</title>
 
-  <style>
-    :root{
-      --bg:#070810;
-      --bg2:#0b0c12;
-      --text:#f4f6ff;
-      --muted:rgba(244,246,255,.72);
-      --panel:rgba(255,255,255,.06);
-      --border:rgba(255,255,255,.12);
-      --a:#7c5cff;
-      --b:#2bd2ff;
-      --radius:22px;
-      --shadow: 0 22px 70px rgba(0,0,0,.55);
-      --shadow2: 0 10px 30px rgba(0,0,0,.35);
-    }
+<style>
+:root{
+  --bg:#05060c;
+  --panel:#0c0f1a;
+  --soft:#121528;
+  --text:#f5f7ff;
+  --muted:rgba(245,247,255,.65);
+  --accent:#7c6cff;
+  --accent2:#3fd0ff;
+  --radius:22px;
+}
 
-    *{ box-sizing:border-box; }
-    html{ scroll-behavior:smooth; }
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:
+    radial-gradient(900px 500px at 15% 10%, rgba(124,108,255,.25), transparent 60%),
+    radial-gradient(800px 600px at 85% 20%, rgba(63,208,255,.18), transparent 60%),
+    linear-gradient(180deg,#05060c,#070916);
+  color:var(--text);
+}
 
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(1200px 700px at 15% 10%, rgba(124,92,255,.18), transparent 60%),
-        radial-gradient(1000px 650px at 85% 12%, rgba(43,210,255,.12), transparent 60%),
-        linear-gradient(180deg, var(--bg2), var(--bg));
-      overflow-x:hidden;
-    }
+a{color:inherit;text-decoration:none}
+.container{max-width:1180px;margin:0 auto;padding:28px 18px 120px}
 
-    a{ color:inherit; text-decoration:none; }
-    .container{ max-width:1160px; margin:0 auto; padding:30px 18px 90px; }
+/* NAV */
+header{
+  position:sticky;top:0;z-index:99;
+  backdrop-filter:blur(16px);
+  background:rgba(5,6,12,.65);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav{
+  max-width:1180px;margin:0 auto;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 18px;
+}
+.logo{
+  font-weight:900;
+  letter-spacing:.3px;
+}
+nav a{
+  margin-left:16px;
+  font-size:14px;
+  color:var(--muted);
+}
+nav a:hover{color:var(--text)}
 
-    /* NAV */
-    .nav{
-      position:sticky; top:0; z-index:50;
-      background: rgba(7,8,16,.62);
-      border-bottom:1px solid var(--border);
-      backdrop-filter: blur(14px);
-    }
-    .nav-inner{
-      max-width:1160px; margin:0 auto; padding:14px 18px;
-      display:flex; justify-content:space-between; align-items:center; gap:14px;
-    }
-    .logo{
-      font-weight:950; display:flex; align-items:center; gap:10px;
-      letter-spacing:.2px;
-    }
-    .dot{
-      width:10px; height:10px; border-radius:999px;
-      background: linear-gradient(135deg, var(--a), var(--b));
-      box-shadow: 0 0 26px rgba(124,92,255,.45);
-    }
-    .nav-links{ display:flex; flex-wrap:wrap; gap:10px; justify-content:flex-end; }
-    .nav-links a{
-      color:var(--muted); font-size:14px;
-      padding:8px 10px; border-radius:999px;
-      border:1px solid transparent;
-      transition:.15s ease;
-    }
-    .nav-links a:hover{
-      color:var(--text);
-      background: var(--panel);
-      border-color: var(--border);
-      transform: translateY(-1px);
-    }
+/* HERO */
+.hero{
+  padding:100px 0 70px;
+}
+.hero h1{
+  font-size:56px;
+  line-height:1.05;
+  max-width:900px;
+}
+.hero p{
+  max-width:760px;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.7;
+  margin-top:20px;
+}
+.cta{
+  margin-top:34px;
+  display:flex;gap:16px;flex-wrap:wrap;
+}
+.btn{
+  padding:14px 22px;
+  border-radius:14px;
+  font-weight:800;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#05060c;
+}
+.btn.alt{
+  background:transparent;
+  border:1px solid rgba(255,255,255,.2);
+  color:var(--text);
+}
 
-    /* HERO */
-    .hero{
-      padding:62px 0 34px;
-      border-bottom:1px solid var(--border);
-    }
-    .pill{
-      display:inline-flex;
-      padding:8px 12px;
-      border-radius:999px;
-      background:var(--panel);
-      border:1px solid var(--border);
-      color:var(--muted);
-      font-size:12px;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-    }
-    h1{
-      margin:14px 0 12px;
-      font-size:46px;
-      line-height:1.05;
-      letter-spacing:-.7px;
-    }
-    .hero-text{
-      margin:0;
-      max-width:860px;
-      color:var(--muted);
-      line-height:1.7;
-      font-size:16.5px;
-    }
-    .hero-actions{
-      margin-top:18px;
-      display:flex; flex-wrap:wrap; gap:10px;
-    }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 14px;
-      border-radius:14px;
-      border:1px solid var(--border);
-      background:var(--panel);
-      font-weight:900;
-      color:var(--text);
-      box-shadow: var(--shadow2);
-      transition:.15s ease;
-    }
-    .btn:hover{ transform: translateY(-2px); }
-    .btn.primary{
-      border:0;
-      background: linear-gradient(135deg, rgba(124,92,255,1), rgba(43,210,255,.85));
-      color: rgba(10,10,16,.95);
-    }
-    .tags{
-      margin-top:14px; display:flex; flex-wrap:wrap; gap:10px;
-    }
-    .tags span{
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:var(--panel);
-      font-size:12px;
-      color:var(--muted);
-    }
+/* SECTION */
+section{margin-top:90px}
+h2{
+  font-size:34px;
+  margin-bottom:16px;
+}
+.sub{
+  color:var(--muted);
+  max-width:720px;
+  line-height:1.6;
+}
 
-    /* SECTIONS */
-    .section{ margin-top:58px; }
-    .section-head{ margin-bottom:14px; }
-    .section-head h2{
-      margin:0 0 8px;
-      font-size:28px;
-      letter-spacing:-.35px;
-      display:inline-block;
-      padding-bottom:10px;
-      position:relative;
-    }
-    .section-head h2::after{
-      content:"";
-      position:absolute;
-      left:0; bottom:0;
-      height:2px; width:74%;
-      border-radius:999px;
-      background: linear-gradient(90deg, rgba(124,92,255,.90), rgba(43,210,255,.90), rgba(255,79,216,.70));
-      transform: scaleX(.18);
-      transform-origin:left;
-      opacity:.55;
-      transition:.6s ease;
-    }
-    .section-head h2:hover::after{
-      transform: scaleX(1);
-      opacity:1;
-    }
-    .section-head p{ margin:0; color:var(--muted); line-height:1.6; }
+/* FEATURE */
+.feature{
+  margin-top:36px;
+  border-radius:28px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 40px 120px rgba(0,0,0,.55);
+}
+.feature iframe{
+  width:100%;
+  height:680px;
+  border:0;
+}
 
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap:14px;
-    }
+/* GRID */
+.grid{
+  margin-top:36px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+.card{
+  background:linear-gradient(180deg,var(--panel),var(--soft));
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:var(--radius);
+  padding:18px;
+  transition:.3s ease;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+.tag{
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.4px;
+  color:var(--accent2);
+}
+.video{
+  margin-top:14px;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.12);
+}
+.video iframe{
+  width:100%;
+  height:320px;
+  border:0;
+}
+.desc{
+  margin-top:12px;
+  font-size:15px;
+  color:var(--muted);
+  line-height:1.6;
+}
 
-    .card{
-      border-radius: var(--radius);
-      border:1px solid var(--border);
-      background: linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.06));
-      box-shadow: var(--shadow2);
-      padding:16px;
-    }
+/* CAPSTONE */
+.capstone iframe{
+  height:620px;
+}
 
-    .meta{ color:var(--muted); font-size:13px; }
+/* MUSIC */
+.music-grid{
+  margin-top:36px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+.music iframe{
+  width:100%;
+  border-radius:18px;
+}
 
-    .video{
-      border-radius:22px;
-      overflow:hidden;
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.02);
-      box-shadow: 0 28px 90px rgba(0,0,0,.42);
-      margin-top:12px;
-    }
-    .video iframe{ width:100%; border:0; display:block; }
-    .video-hero iframe{ height:640px; }
-    .video-small iframe{ height:330px; }
+/* SKILLS */
+.skills{
+  margin-top:30px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+.skill-card{
+  background:linear-gradient(180deg,var(--panel),var(--soft));
+  border-radius:var(--radius);
+  padding:26px;
+  border:1px solid rgba(255,255,255,.1);
+  line-height:2;
+}
 
-    .platform{
-      margin-bottom:10px;
-      font-size:13px;
-      font-weight:900;
-      letter-spacing:.04em;
-      padding:6px 12px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:var(--panel);
-      color:var(--muted);
-      display:inline-block;
-    }
+/* FOOTER */
+footer{
+  margin-top:120px;
+  padding:50px 20px;
+  text-align:center;
+  color:var(--muted);
+  border-top:1px solid rgba(255,255,255,.08);
+}
 
-    .footer{
-      margin-top:70px;
-      padding:32px 20px;
-      border-top:1px solid var(--border);
-      text-align:center;
-      color:var(--muted);
-    }
-
-    @media (max-width: 980px){
-      .grid{ grid-template-columns: 1fr; }
-      .video-hero iframe{ height:420px; }
-      h1{ font-size:36px; }
-    }
-  </style>
+@media(max-width:900px){
+  .grid,.music-grid,.skills{grid-template-columns:1fr}
+  .hero h1{font-size:42px}
+  .feature iframe,.capstone iframe{height:420px}
+}
+</style>
 </head>
 
 <body>
 
-<header class="nav">
-  <div class="nav-inner">
-    <a class="logo" href="#top"><span class="dot"></span>Jason Ntiamoah</a>
-    <nav class="nav-links">
-      <a href="#reel">Reel</a>
-      <a href="#about">About</a>
+<header>
+  <div class="nav">
+    <div class="logo">Jason Ntiamoah</div>
+    <nav>
       <a href="#work">Work</a>
       <a href="#capstone">Capstone</a>
       <a href="#music">Music</a>
@@ -237,221 +219,150 @@
   </div>
 </header>
 
-<main id="top" class="container">
+<main class="container">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="pill">Media Portfolio</div>
-    <h1>Media Producer • Video Editor • Audio-Visual Storytelling</h1>
-    <p class="hero-text">
-      I create story-driven media built on clean pacing, strong tone, and sound-led rhythm.
-      My work spans narrative film, experimental media, and music-driven visuals.
-    </p>
+<!-- HERO -->
+<section class="hero">
+  <h1>Media Producer & Visual Storyteller<br>Focused on Emotion, Rhythm, and Sound</h1>
+  <p>
+    I create cinematic visuals across music, narrative, and experimental media.
+    My work blends atmosphere, pacing, and sound-driven storytelling to leave
+    lasting emotional impact.
+  </p>
+  <div class="cta">
+    <a class="btn" href="#work">View Work</a>
+    <a class="btn alt" href="#music">Listen</a>
+  </div>
+</section>
 
-    <div class="hero-actions">
-      <a class="btn primary" href="#reel">Watch Demo Reel</a>
-      <a class="btn" href="#work">View Work</a>
-      <a class="btn" href="https://drive.google.com/file/d/12rdJcmk9wn5SZu5tNst2k3dlRCLnb0h5/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a>
-    </div>
+<!-- FEATURE -->
+<section id="work">
+  <h2>Featured Visual</h2>
+  <p class="sub">
+    Flagship piece highlighting my approach to mood, restraint, and emotional pacing.
+  </p>
 
-    <div class="tags">
-      <span>Adobe Premiere Pro</span>
-      <span>Adobe After Effects</span>
-      <span>FL Studio</span>
-      <span>Avid Pro Tools</span>
-    </div>
-  </section>
+  <div class="feature">
+    <iframe src="https://www.youtube.com/embed/khUQYK91w-o" allowfullscreen></iframe>
+  </div>
+</section>
 
-  <!-- DEMO REEL -->
-  <section id="reel" class="section">
-    <div class="section-head">
-      <h2>Demo Reel</h2>
-      <p>Highlights focused on pacing, structure, and sound.</p>
-    </div>
-    <div class="video video-hero">
-      <iframe src="https://www.youtube.com/embed/khUQYK91w-o" title="Demo Reel" allowfullscreen></iframe>
-    </div>
-  </section>
+<!-- SELECTED WORK -->
+<section>
+  <h2>Selected Work</h2>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="section-head">
-      <h2>About</h2>
-      <p>What I bring to a project.</p>
-    </div>
+  <div class="grid">
+
     <div class="card">
-      I’m a media producer and editor focused on rhythm, atmosphere, and emotional clarity.
-      My music production background shapes how I build pacing and sound-led storytelling in visual work.
-    </div>
-  </section>
-
-  <!-- WORK -->
-  <section id="work" class="section">
-    <div class="section-head">
-      <h2>Selected Work</h2>
-      <p>Range across music video, editing, and narrative structure.</p>
-    </div>
-
-    <div class="grid">
-      <article class="card">
-        <div class="meta">Music Video</div>
-        <div class="video video-small">
-          <iframe src="https://www.youtube.com/embed/3lkqnvLS8h4" title="Music Video" allowfullscreen></iframe>
-        </div>
-        <div style="margin-top:10px; color:var(--muted); line-height:1.6;">
-          <strong style="color:var(--text)">Role:</strong> Performer • Co-Director — Official music video for my original song.
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="meta">Editing</div>
-        <div class="video video-small">
-          <iframe src="https://www.youtube.com/embed/DARtWTcVBt8" title="Editing Project" allowfullscreen></iframe>
-        </div>
-        <div style="margin-top:10px; color:var(--muted); line-height:1.6;">
-          <strong style="color:var(--text)">Role:</strong> Editor — Pacing, continuity, and shot selection.
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="meta">Visual Composition</div>
-        <div class="video video-small">
-          <iframe src="https://www.youtube.com/embed/X63PJs7yqxg" title="Composition Project" allowfullscreen></iframe>
-        </div>
-        <div style="margin-top:10px; color:var(--muted); line-height:1.6;">
-          <strong style="color:var(--text)">Role:</strong> Editor — Atmosphere-driven sequencing and tone.
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="meta">Narrative Structure</div>
-        <div class="video video-small">
-          <iframe src="https://www.youtube.com/embed/SJ49ufvJnY4" title="Narrative Project" allowfullscreen></iframe>
-        </div>
-        <div style="margin-top:10px; color:var(--muted); line-height:1.6;">
-          <strong style="color:var(--text)">Role:</strong> Editor — Story clarity through structure and pacing.
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- CAPSTONE -->
-  <section id="capstone" class="section">
-    <div class="section-head">
-      <h2>Capstone Media Theses Production</h2>
-      <p>Experimental Short Film</p>
+      <span class="tag">Music Video</span>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/wZNrG9REzxo" allowfullscreen></iframe>
+      </div>
+      <p class="desc">
+        <strong>u don’t care</strong><br>
+        My song and official music video. I performed and co-directed,
+        focusing on raw emotion and performance-led visuals.
+      </p>
     </div>
 
     <div class="card">
-      <strong>Role:</strong> Assistant Editor • Production Support
-      <div style="margin-top:10px; color:var(--muted); line-height:1.65;">
-        An experimental short film exploring dissociation through repetition, distorted sound design,
-        and fragmented visual reality.
+      <span class="tag">Editing</span>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/DARtWTcVBt8" allowfullscreen></iframe>
       </div>
-    </div>
-
-    <div class="video video-hero" style="margin-top:14px;">
-      <iframe src="https://www.youtube.com/embed/xzx7-x82cng" title="Capstone" allowfullscreen></iframe>
-    </div>
-  </section>
-
-  <!-- MUSIC -->
-  <section id="music" class="section">
-    <div class="section-head">
-      <h2>Music & Audio</h2>
-      <p>Released music as Dr. Blackout.</p>
-    </div>
-
-    <div class="grid">
-      <div class="card">
-        <div class="platform">Spotify</div>
-        <iframe
-          src="https://open.spotify.com/embed/artist/303ESft4GOklhvhPIDsXdr?utm_source=generator"
-          width="100%"
-          height="352"
-          frameborder="0"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-          style="border-radius:14px;">
-        </iframe>
-      </div>
-
-      <div class="card">
-        <div class="platform">Apple Music</div>
-        <iframe
-          allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-          frameborder="0"
-          height="352"
-          style="width:100%; border-radius:14px; overflow:hidden;"
-          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-          src="https://embed.music.apple.com/us/album/ethereal-2/1811094718">
-        </iframe>
-      </div>
-    </div>
-
-    <div class="card" style="margin-top:14px;">
-      <div class="platform">SoundCloud</div>
-      <iframe
-        width="100%"
-        height="420"
-        scrolling="no"
-        frameborder="no"
-        allow="autoplay"
-        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1954727855&color=%237c5cff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-      </iframe>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="section">
-    <div class="section-head">
-      <h2>Skills</h2>
-      <p>Core strengths + tools.</p>
-    </div>
-
-    <div class="grid">
-      <div class="card">
-        <ul style="margin:0; padding-left:18px; line-height:1.85; color:var(--muted);">
-          <li>Video editing & pacing</li>
-          <li>Sound design & arrangement</li>
-          <li>Visual rhythm & continuity</li>
-          <li>Narrative structure</li>
-          <li>Creative collaboration</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <ul style="margin:0; padding-left:18px; line-height:1.85; color:var(--muted);">
-          <li>Adobe Premiere Pro</li>
-          <li>Adobe After Effects</li>
-          <li>FL Studio</li>
-          <li>Avid Pro Tools</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="section-head">
-      <h2>Contact</h2>
-      <p>Open to opportunities and collaborations.</p>
+      <p class="desc">
+        Editing project emphasizing pacing, structure, and clarity.
+      </p>
     </div>
 
     <div class="card">
-      <a class="btn primary" href="mailto:jasonntia@gmail.com">jasonntia@gmail.com</a>
+      <span class="tag">Atmosphere</span>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/X63PJs7yqxg" allowfullscreen></iframe>
+      </div>
+      <p class="desc">
+        Visual study centered on mood, tone, and emotional framing.
+      </p>
     </div>
-  </section>
+
+    <div class="card">
+      <span class="tag">Narrative</span>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/SJ49ufvJnY4" allowfullscreen></iframe>
+      </div>
+      <p class="desc">
+        Narrative-focused edit prioritizing progression and storytelling flow.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CAPSTONE -->
+<section id="capstone">
+  <h2>Capstone Thesis Film</h2>
+  <p class="sub">
+    Experimental short exploring dissociation through repetition,
+    fragmented sound design, and visual distortion.
+  </p>
+
+  <div class="feature capstone">
+    <iframe src="https://www.youtube.com/embed/xzx7-x82cng" allowfullscreen></iframe>
+  </div>
+</section>
+
+<!-- MUSIC -->
+<section id="music">
+  <h2>Music</h2>
+
+  <div class="music-grid">
+
+    <div class="music">
+      <iframe src="https://open.spotify.com/embed/artist/303ESft4GOklhvhPIDsXdr" height="352"></iframe>
+    </div>
+
+    <div class="music">
+      <iframe src="https://embed.music.apple.com/us/album/ethereal-2/1811094718" height="352"></iframe>
+    </div>
+
+  </div>
+
+  <div class="card" style="margin-top:26px">
+    <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1954727855&visual=true" height="420"></iframe>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills & Tools</h2>
+
+  <div class="skills">
+    <div class="skill-card">
+      Video Editing<br>
+      Narrative Structure<br>
+      Visual Pacing<br>
+      Sound-Led Storytelling
+    </div>
+    <div class="skill-card">
+      Adobe Premiere Pro<br>
+      Adobe After Effects<br>
+      FL Studio<br>
+      Avid Pro Tools
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <a class="btn" href="mailto:jasonntia@gmail.com">jasonntia@gmail.com</a>
+</section>
 
 </main>
 
-<footer class="footer">
-  © <span id="year"></span> Jason Ntiamoah
+<footer>
+  © 2025 Jason Ntiamoah
 </footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
 
 </body>
 </html>
