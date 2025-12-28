@@ -1,321 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Jason Ntiamoah | Media & Music</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jason Ntiamoah | Media & Music Portfolio</title>
+  <meta name="description" content="Media producer and visual storyteller blending music, film, and experimental visuals.">
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
-:root{
-  --bg:#0b0b12;
-  --panel:#141420;
-  --panel-soft:#1b1b2a;
-  --accent:#7c5cff;
-  --accent-2:#2ee6d6;
-  --text:#f4f4f8;
-  --muted:#b4b4c6;
-}
-
-*{box-sizing:border-box}
-
-body{
-  margin:0;
-  font-family:Inter,system-ui,-apple-system,sans-serif;
-  background:
-    radial-gradient(1200px 600px at 10% -10%, #1b1440 0%, transparent 60%),
-    radial-gradient(900px 500px at 90% 10%, #102c2a 0%, transparent 55%),
-    var(--bg);
-  color:var(--text);
-}
-
-/* LAYOUT */
-.container{
-  max-width:1200px;
-  margin:0 auto;
-  padding:48px 20px 140px;
-}
-
-/* NAV */
-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:80px;
-}
-
-nav .logo{
-  font-weight:800;
-  letter-spacing:.4px;
-  font-size:18px;
-}
-
-nav .links a{
-  margin-left:26px;
-  font-size:14px;
-  color:var(--muted);
-}
-
-nav .links a:hover{color:var(--text)}
-
-/* HERO */
-.hero{
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:48px;
-  align-items:center;
-  margin-bottom:120px;
-}
-
-.hero h1{
-  font-size:60px;
-  line-height:1.05;
-  font-weight:800;
-  margin-bottom:22px;
-}
-
-.hero p{
-  font-size:18px;
-  color:var(--muted);
-  line-height:1.7;
-}
-
-.hero-card{
-  background:linear-gradient(180deg,var(--panel),var(--panel-soft));
-  border-radius:22px;
-  padding:22px;
-  box-shadow:0 20px 60px rgba(0,0,0,.5);
-}
-
-/* VIDEO */
-.video{
-  position:relative;
-  width:100%;
-  padding-top:56.25%;
-  border-radius:16px;
-  overflow:hidden;
-}
-
-.video iframe{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  border:none;
-}
-
-/* SECTION */
-.section{
-  margin-bottom:120px;
-}
-
-.section h2{
-  font-size:36px;
-  margin-bottom:28px;
-}
-
-/* FEATURE */
-.feature{
-  background:linear-gradient(180deg,var(--panel),var(--panel-soft));
-  padding:32px;
-  border-radius:28px;
-  box-shadow:0 30px 80px rgba(0,0,0,.55);
-}
-
-.feature p{
-  margin-top:20px;
-  font-size:16px;
-  color:var(--muted);
-  max-width:900px;
-  line-height:1.7;
-}
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:28px;
-}
-
-.card{
-  background:linear-gradient(180deg,var(--panel),var(--panel-soft));
-  border-radius:22px;
-  padding:20px;
-  box-shadow:0 20px 50px rgba(0,0,0,.45);
-}
-
-.card p{
-  margin-top:14px;
-  font-size:14px;
-  color:var(--muted);
-  line-height:1.6;
-}
-
-/* MUSIC */
-.music-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:28px;
-}
-
-.music iframe{
-  width:100%;
-  height:350px;
-  border:none;
-  border-radius:16px;
-}
-
-/* SKILLS */
-.skills{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:32px;
-  font-size:15px;
-  color:var(--muted);
-  line-height:2;
-}
-
-/* FOOTER */
-footer{
-  margin-top:160px;
-  text-align:center;
-  color:var(--muted);
-  font-size:14px;
-}
-
-/* MOBILE */
-@media(max-width:900px){
-  .hero{grid-template-columns:1fr}
-  .hero h1{font-size:42px}
-  .grid{grid-template-columns:1fr}
-  .music-grid,.skills{grid-template-columns:1fr}
-}
-</style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-
-<div class="container">
-
-<nav>
-  <div class="logo">Jason Ntiamoah</div>
-  <div class="links">
-    <a href="#work">Work</a>
-    <a href="#music">Music</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">
+      <span class="logo-mark"></span>
+      <span class="logo-text">Jason Ntiamoah</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#featured">Featured</a>
+      <a href="#screen">Screen Work</a>
+      <a href="#music">Music</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
-</nav>
+</header>
 
-<!-- HERO -->
-<section class="hero">
-  <div>
-    <h1>Media, music, and visual storytelling<br>with emotional weight.</h1>
-    <p>
-      I create cinematic visuals across music videos, experimental film,
-      and narrative media, driven by rhythm, atmosphere, and sound.
-    </p>
-  </div>
+<main id="top" class="page">
 
-  <div class="hero-card">
-    <div class="video">
-      <iframe src="https://www.youtube.com/embed/khUQYK91w-o" allowfullscreen></iframe>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURE -->
-<section class="section feature" id="work">
-  <h2>Primary Work — “you’re just a ghost”</h2>
-  <div class="video">
-    <iframe src="https://www.youtube.com/embed/khUQYK91w-o" allowfullscreen></iframe>
-  </div>
-  <p>
-    “you’re just a ghost” is an experimental visual project exploring emotional absence,
-    repetition, and dissociation. The piece prioritizes mood, restraint, and sound-led pacing
-    to immerse the viewer inside a fragmented mental space.
-  </p>
-</section>
-
-<!-- PROJECTS -->
-<section class="section">
-  <h2>Selected Projects</h2>
-  <div class="grid">
-    <div class="card">
-      <div class="video">
-        <iframe src="https://www.youtube.com/embed/wZNrG9REzxo" allowfullscreen></iframe>
-      </div>
-      <p>
-        Original song and music video. I performed, acted, and co-directed,
-        shaping the visual language around vulnerability and raw performance.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="video">
-        <iframe src="https://www.youtube.com/embed/xzx7-x82cng" allowfullscreen></iframe>
-      </div>
-      <p>
-        Capstone thesis film exploring dissociation through repetition,
-        surreal transitions, and distorted sound design.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="video">
-        <iframe src="https://www.youtube.com/embed/3lkqnvLS8h4" allowfullscreen></iframe>
-      </div>
-      <p>
-        Music video collaboration focused on pacing, performance framing,
-        and atmospheric lighting.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- MUSIC -->
-<section class="section" id="music">
-  <h2>Music</h2>
-  <div class="music-grid">
-    <iframe src="https://open.spotify.com/embed/artist/303ESft4GOklhvhPIDsXdr"></iframe>
-    <iframe src="https://embed.music.apple.com/us/album/ethereal-2/1811094718"></iframe>
-  </div>
-
-  <div style="margin-top:28px">
-    <iframe
-      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1954727855&visual=true"
-      height="420"
-      style="border-radius:18px">
-    </iframe>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="section" id="skills">
-  <h2>Skills & Tools</h2>
-  <div class="skills">
+  <!-- HERO -->
+  <section class="hero">
     <div>
-      Video Editing & Pacing<br>
-      Visual Rhythm<br>
-      Narrative Structure<br>
-      Sound-Led Storytelling
+      <p class="eyebrow">Media • Music • Visual Storytelling</p>
+      <h1>Creating visuals that feel like memories you can’t shake.</h1>
+      <p class="hero-body">
+        I work at the intersection of music, film, and experimental visuals—using pacing,
+        sound, and atmosphere to build emotionally heavy worlds. My flagship piece,
+        <span class="highlight">“you’re just a ghost”</span>, anchors this portfolio.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn primary" href="#featured">Watch Featured Piece</a>
+        <a class="btn secondary" href="#music">Listen to My Sound</a>
+      </div>
     </div>
-    <div>
-      Adobe Premiere Pro<br>
-      Adobe After Effects<br>
-      FL Studio<br>
-      Avid Pro Tools
-    </div>
-  </div>
-</section>
 
-<footer id="contact">
-  Contact — <a href="mailto:jasonntia@gmail.com">jasonntia@gmail.com</a><br>
-  © 2025 Jason Ntiamoah
+    <aside class="hero-panel">
+      <div class="hero-tag">Currently seeking</div>
+      <ul>
+        <li>Media & post-production internships</li>
+        <li>Music video & visualizer collaborations</li>
+        <li>Assistant editor / production support roles</li>
+      </ul>
+      <a class="hero-link" href="mailto:jasonntia@gmail.com">jasonntia@gmail.com</a>
+    </aside>
+  </section>
+
+  <!-- FEATURED PIECE -->
+  <section id="featured" class="section">
+    <div class="section-head">
+      <h2>Featured Film — “you’re just a ghost”</h2>
+      <p>
+        Primary visual work exploring emotional distance, repetition, and dissociation.
+      </p>
+    </div>
+
+    <div class="card featured-card">
+      <div class="video video-hero">
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/3lkqnvLS8h4?list=RD3lkqnvLS8h4"
+          title="Dr. Blackout - You're just a ghost (Official Video)"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="card-body">
+        <p>
+          <strong>“you’re just a ghost”</strong> is an experimental visual piece centered on
+          emotional absence and the feeling of being physically present but mentally elsewhere.
+          Built around repetition, negative space, and sound-led pacing, the project leans into
+          restraint instead of over-explaining, letting the viewer sit inside the disconnect.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREEN WORK -->
+  <section id="screen" class="section">
+    <div class="section-head">
+      <h2>Screen Work</h2>
+      <p>A selection of projects across music video, capstone work, and visual experiments.</p>
+    </div>
+
+    <div class="grid grid-3">
+      <!-- u don't care -->
+      <article class="card">
+        <div class="card-meta">
+          <span class="pill">Music Video</span>
+        </div>
+        <div class="video video-card">
+          <iframe
+            src="https://www.youtube.com/embed/wZNrG9REzxo"
+            title="u don't care"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="card-body">
+          <h3>“u don’t care”</h3>
+          <p>
+            Original song and official music video. I wrote and performed the track, acted on camera,
+            and co-directed the visual approach, aiming for a raw, performance-driven feel.
+          </p>
+        </div>
+      </article>
+
+      <!-- Capstone -->
+      <article class="card">
+        <div class="card-meta">
+          <span class="pill">Capstone Media Theses Production</span>
+        </div>
+        <div class="video video-card">
+          <iframe
+            src="https://www.youtube.com/embed/xzx7-x82cng"
+            title="Capstone dissociation film"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="card-body">
+          <h3>Capstone Thesis Film</h3>
+          <p>
+            Experimental short film exploring dissociation and derealization. I contributed as
+            assistant editor and production support, helping shape pacing, visual rhythm,
+            and the unsettling tone of the piece.
+          </p>
+        </div>
+      </article>
+
+      <!-- Editing / Visual Study -->
+      <article class="card">
+        <div class="card-meta">
+          <span class="pill">Editing & Visual Rhythm</span>
+        </div>
+        <div class="video video-card">
+          <iframe
+            src="https://www.youtube.com/embed/DARtWTcVBt8"
+            title="Editing sequence"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="card-body">
+          <h3>Editing Sequence</h3>
+          <p>
+            A cut built to showcase timing, shot selection, and flow. Focused on clean transitions,
+            intentional pacing, and keeping the viewer oriented while the energy builds.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- MUSIC SECTION -->
+  <section id="music" class="section">
+    <div class="section-head">
+      <h2>Music & Audio</h2>
+      <p>
+        As Dr. Blackout, I produce and release music that directly informs my visual pacing
+        and editing choices.
+      </p>
+    </div>
+
+    <div class="grid grid-3 music-grid">
+      <!-- Spotify -->
+      <div class="card">
+        <h3 class="music-title">Spotify</h3>
+        <div class="embed">
+          <iframe
+            src="https://open.spotify.com/embed/artist/303ESft4GOklhvhPIDsXdr?utm_source=generator"
+            width="100%"
+            height="352"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Apple Music -->
+      <div class="card">
+        <h3 class="music-title">Apple Music</h3>
+        <div class="embed">
+          <iframe
+            allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+            frameborder="0"
+            height="352"
+            style="width:100%; border-radius:12px; overflow:hidden;"
+            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+            src="https://embed.music.apple.com/us/album/ethereal-2/1811094718">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- SoundCloud (slim, not giant visual) -->
+      <div class="card">
+        <h3 class="music-title">SoundCloud</h3>
+        <div class="embed">
+          <iframe
+            width="100%"
+            height="140"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A1954727855&color=%237c5cff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=false">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / SKILLS -->
+  <section id="about" class="section">
+    <div class="section-head">
+      <h2>About & Skills</h2>
+      <p>
+        Media producer, editor, and artist building work where music and visual storytelling
+        feed each other.
+      </p>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="card-body">
+          <h3>Creative Focus</h3>
+          <p>
+            I’m interested in projects that lean into mood, psychology, and non-traditional
+            storytelling—especially where music plays as big a role as the visuals.
+          </p>
+          <p>
+            My experience spans performance-driven music videos, capstone-level short film
+            work, and experimental visuals that prioritize rhythm and tone over strict plot.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h3>Core Skills</h3>
+          <ul class="skill-list">
+            <li>Video editing, pacing, and structure</li>
+            <li>Sound-led visual storytelling</li>
+            <li>Music video and performance direction</li>
+            <li>Experimental / psychological tone pieces</li>
+            <li>Collaborative production and assistant editing</li>
+          </ul>
+          <h3 class="tools-title">Tools</h3>
+          <ul class="skill-list">
+            <li>Adobe Premiere Pro</li>
+            <li>Adobe After Effects</li>
+            <li>FL Studio</li>
+            <li>Avid Pro Tools</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="section-head">
+      <h2>Contact</h2>
+      <p>Open to internships, assistant positions, and creative collaborations.</p>
+    </div>
+
+    <div class="card contact-card">
+      <p>For opportunities, inquiries, or links to additional work:</p>
+      <a class="btn primary" href="mailto:jasonntia@gmail.com">jasonntia@gmail.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  © <span id="year"></span> Jason Ntiamoah
 </footer>
 
-</div>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
